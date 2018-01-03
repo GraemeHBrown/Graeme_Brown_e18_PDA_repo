@@ -14,6 +14,8 @@ def func1 val
 end
 
 # spelling mistake in function definition 'def not dif'
+# no comma separating function arguments
+# spacing/ tabbing of return statement in if statement is wrong.
 # no return statement in the else
 # Function has one too many end statements
 dif max a b
