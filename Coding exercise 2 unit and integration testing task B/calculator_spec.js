@@ -169,5 +169,27 @@ describe('calculator', function () {
         assert.equal(calculator.runningTotal, 'Infinity');
     })
 
+    it('can return negative number from calculation', function () {
+        calculator.numberClick(5);
+        calculator.operatorClick('-');
+        calculator.numberClick(10);
+        calculator.operatorClick('=');
+        assert.equal(calculator.runningTotal, -5);
+    })
+
+    it('calculations on negative numbers work as expected', function () {
+        calculator.numberClick(5);
+        calculator.operatorClick('-');
+        calculator.numberClick(10);
+        calculator.operatorClick('=');
+        assert.equal(calculator.runningTotal, -5);
+        calculator.operatorClick('+');
+        calculator.numberClick(3);
+        calculator.operatorClick('=');
+        assert.equal(calculator.runningTotal, -2);
+    })
+
+
+
 
 });
